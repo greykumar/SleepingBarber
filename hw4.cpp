@@ -55,7 +55,7 @@ void * barber(void *arg)//consumer
             pthread_cond_wait(&cv, &mutex);
         }
         pthread_mutex_lock(&mutex);
-        printf("Customer count is:%d.\n",count);
+
         count--;
         printf("Barber cut hair,count is:%d.\n",count);
         pthread_mutex_unlock(&mutex);
